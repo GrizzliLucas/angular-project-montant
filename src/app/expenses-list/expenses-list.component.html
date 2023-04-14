@@ -1,0 +1,42 @@
+<div class="container mx-auto mt-10">
+    <h1>Liste des notes de frais</h1>
+    <div class="mt-8 flex items-end space-x-8">
+      <div class="w-1/2 bg-orange-100 border border-orange-300 p-4 rounded-md flex flex-col justify-between">
+        <h2 class="mb-4">En attente</h2>
+        <ng-container *ngFor="let expense of expenses$ | async">
+          <ng-container *ngIf="expense.status === 'en attente'">
+            <div class="mb-2">
+              <div class="font-bold">{{ expense.name }}</div>
+              <div>{{ expense.amount }} €</div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="w-1/2 bg-green-100 border border-green-300 p-4 rounded-md flex flex-col justify-between">
+        <h2 class="mb-4">Terminé</h2>
+        <ng-container *ngFor="let expense of expenses$ | async">
+          <ng-container *ngIf="expense.status === 'terminé'">
+            <div class="mb-2">
+              <div class="font-bold">{{ expense.name }}</div>
+              <div>{{ expense.amount }} €</div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+    <div
+      class="mt-4 w-full bg-white p-4 rounded-md shadow border border-solid flex justify-between items-center"
+      [ngClass]="{
+        'border-red-300': totalEnAttente > totalTermine,
+        'border-green-300': totalEnAttente <= totalTermine
+      }"
+    >
+      <div>
+        À venir : {{ totalEnAttente }} €
+      </div>
+      <div>
+        Reçu : {{ totalTermine }} €
+      </div>
+    </div>
+  </div>
+  

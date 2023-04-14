@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ag-project-5e9e5": {
+      "hosting": {
+        "ag-lm": [
+          "ag-project-5e9e5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ag-project-5e9e5"
+  }
+}
