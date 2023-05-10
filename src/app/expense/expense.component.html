@@ -24,23 +24,23 @@
       </button>
     </div>
   </form>
-  <div *ngIf="expenseForm.get('name')?.touched && expenseForm.get('name')?.errors?.['required']">
+  <div *ngIf="expenseForm.get('name')?.touched && expenseForm.get('name')?.errors?.['required']" i18n="@@error.namerequire">
     Le nom est requis.
   </div>
   
-  <div *ngIf="expenseForm.get('name')?.touched && expenseForm.get('name')?.errors?.['minlength']">
+  <div *ngIf="expenseForm.get('name')?.touched && expenseForm.get('name')?.errors?.['minlength']" i18n="@@error.needmorecarac">
     Le nom doit comporter au moins 2 caractères.
   </div>
 
-  <div *ngIf="expenseForm.get('amount')?.touched && expenseForm.get('amount')?.errors?.['required']">
+  <div *ngIf="expenseForm.get('amount')?.touched && expenseForm.get('amount')?.errors?.['required']" i18n="@@error.ammount">
     Le montant est requis.
   </div>
   
-  <div *ngIf="expenseForm.get('amount')?.touched && expenseForm.get('amount')?.errors?.['min']">
+  <div *ngIf="expenseForm.get('amount')?.touched && expenseForm.get('amount')?.errors?.['min']" i18n="@@error.ammount0">
     Le montant doit être supérieur à 0.
   </div>
   
-  <div *ngIf="expenseForm.get('status')?.touched && expenseForm.get('status')?.errors?.['required']">
+  <div *ngIf="expenseForm.get('status')?.touched && expenseForm.get('status')?.errors?.['required']" i18n="@@error.statusrequire">
     Le statut est requis.
   </div>
 </div>

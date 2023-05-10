@@ -65,6 +65,41 @@
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="error.namerequire" datatype="html">
+        <source> Le nom est requis. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.needmorecarac" datatype="html">
+        <source> Le nom doit comporter au moins 2 caractères. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.ammount" datatype="html">
+        <source> Le montant est requis. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.ammount0" datatype="html">
+        <source> Le montant doit être supérieur à 0. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.statusrequire" datatype="html">
+        <source> Le statut est requis. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="expenses-list.waiting" datatype="html">
         <source>En attente</source>
         <context-group purpose="location">
@@ -83,14 +118,14 @@
         <source> À venir : <x id="INTERPOLATION" equiv-text="{{ totalEnAttente }}"/> € </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
-          <context context-type="linenumber">34,35</context>
+          <context context-type="linenumber">33,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="expenses-list.received" datatype="html">
         <source> Reçu : <x id="INTERPOLATION" equiv-text="{{ totalTermine }}"/> € </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
-          <context context-type="linenumber">37,38</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="expensefilter" datatype="html">

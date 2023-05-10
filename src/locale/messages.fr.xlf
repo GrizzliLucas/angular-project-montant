@@ -2,12 +2,156 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="fr" arget-language="fr" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="error.namerequire" datatype="html">
+        <source> Le nom est requis. </source>
+        <target> Le nom est requis. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.needmorecarac" datatype="html">
+        <source> Le nom doit comporter au moins 2 caractères. </source>
+        <target> Le nom doit comporter au moins 2 caractères. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.ammount" datatype="html">
+        <source> Le montant est requis. </source>
+        <target> Le montant est requis. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.ammount0" datatype="html">
+        <source> Le montant doit être supérieur à 0. </source>
+        <target> Le montant doit être supérieur à 0. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.statusrequire" datatype="html">
+        <source> Le statut est requis. </source>
+        <target> Le statut est requis. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navbar.title" datatype="html">
+        <source>Gestion de notes de frais</source>
+        <target>Gestion de notes de frais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="expensefilter" datatype="html">
         <source>Filtrer :</source>
         <target>Filtrer :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/manage-expenses/manage-expenses.component.html</context>
           <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="navbar.connect" datatype="html">
+        <source>Se connecter</source>
+        <target>Se connecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.all" datatype="html">
+        <source>Mes notes de frais</source>
+        <target>Mes notes de frais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.add" datatype="html">
+        <source>Ajouter une note de frais</source>
+        <target>Ajouter une note de frais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.manage" datatype="html">
+        <source>Gérer mes notes de frais</source>
+        <target>Gérer mes notes de frais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.name" datatype="html">
+        <source>Nom :</source>
+        <target>Nom :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.value" datatype="html">
+        <source>Valeur (€) :</source>
+        <target>Valeur (€) :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.waiting" datatype="html">
+        <source>En attente</source>
+        <target>En attente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses.ended" datatype="html">
+        <source>Terminé</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expense/expense.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses-list.waiting" datatype="html">
+        <source>En attente</source>
+        <target>En attente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses-list.ended" datatype="html">
+        <source>Terminé</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses-list.incomming" datatype="html">
+        <source> À venir : <x id="INTERPOLATION" equiv-text="{{ totalEnAttente }}"/> € </source>
+        <target> À venir : <x id="INTERPOLATION" equiv-text="{{ totalEnAttente }}"/> € </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expenses-list.received" datatype="html">
+        <source> Reçu : <x id="INTERPOLATION" equiv-text="{{ totalTermine }}"/> € </source>
+        <target> Reçu : <x id="INTERPOLATION" equiv-text="{{ totalTermine }}"/> € </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/expenses-list/expenses-list.component.html</context>
+          <context context-type="linenumber">37,38</context>
         </context-group>
       </trans-unit>
     </body>
