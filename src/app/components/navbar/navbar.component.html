@@ -1,6 +1,6 @@
 <header class="bg-gray-800 text-white shadow-md">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="font-semibold text-lg">Gestion de notes de frais</div>
+    <div class="font-semibold text-lg" i18n="@@navbar.title">Gestion de notes de frais</div>
     <ng-container *ngIf="(authService.user$ | async) as user; else showLogin"> 
       <div class="flex items-center relative group">
         <img [src]="user.photoURL" alt="User photo" class="h-8 w-8 rounded-full transition-all duration-200 cursor-pointer" (mouseover)="hovering = true" (mouseout)="hovering = false" [title]="hovering ? 'Se déconnecter' : ''" (click)="logout()" />
@@ -8,7 +8,7 @@
       </div>
     </ng-container>
     <ng-template #showLogin>
-      <a routerLink="/login" class="btn btn-primary">Se connecter</a>
+      <a routerLink="/login" class="btn btn-primary" i18n="@@navbar.connect">Se connecter</a>
     </ng-template>
   </div>
 </header>
