@@ -12,6 +12,8 @@ import { Observable } from 'rxjs';
 export class ManageExpensesComponent implements OnInit {
   expensesRef: AngularFireList<any>;
   expenses$: Observable<any[]>;
+  filteredExpenses$: Observable<any[]>;
+  filterValue = '';
 
   constructor(private db: AngularFireDatabase) {
     this.expensesRef = this.db.list('expenses');
@@ -20,7 +22,22 @@ export class ManageExpensesComponent implements OnInit {
         changes.map((c) => ({ key: c.payload.key, ...c.payload.val() }))
       )
     );
+    this.filteredExpenses$ = this.expenses$;
   }
 
   ngOnInit(): void {}
+
+  filterExpenses() {
+    this.filteredExpenses$ = this.expenses$.pipe(
+      map((expenses) =>
+        expenses.filter(
+          (expense) =>
+            expense.name
+              .toLowerCase()
+              .indexOf(this.filterValue.toLowerCase()) !== -1
+        )
+      )
+    );
+  }
+  
 }

@@ -1,24 +1,17 @@
-<div
-  class="p-4 bg-white shadow-md rounded-lg flex items-center justify-between mb-4"
-  [ngClass]="{'border-l-4 border-orange-500': expense.status !== 'terminé' }"
->
+<div class="p-4 bg-white shadow-md rounded-lg flex items-center justify-between mb-4"
+  [ngClass]="{'border-l-4 border-orange-500': expense.status !== 'terminé' }">
   <div>
     <h3 class="text-lg font-semibold text-gray-800">{{ expense.name }}</h3>
     <p class="text-gray-600">{{ expense.amount | currency:'EUR' }}</p>
   </div>
 
   <div *ngIf="expense.status === 'en attente'">
-    <button
-      (click)="updateStatus()"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-    >
+    <button (click)="updateStatus()"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
       Marquer comme terminé
     </button>
   </div>
-  <button
-  class="text-red-500 hover:text-red-700 font-bold text-xl"
-  (click)="deleteExpense()"
->
-  &times;
-</button>
+  <button class="text-red-500 hover:text-red-700 font-bold text-xl" (click)="deleteExpense()">
+    &times;
+  </button>
 </div>

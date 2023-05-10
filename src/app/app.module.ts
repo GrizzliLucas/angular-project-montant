@@ -21,6 +21,7 @@ import { ManageExpensesComponent } from './manage-expenses/manage-expenses.compo
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component'; 
+import { DateFormatPipe } from './pipe/date-format.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoginComponent } from './login/login.component';
     ManageExpensesComponent,
     ExpenseItemComponent,
     LoginComponent,
+    DateFormatPipe,
   ],
   imports: [
     BrowserModule,

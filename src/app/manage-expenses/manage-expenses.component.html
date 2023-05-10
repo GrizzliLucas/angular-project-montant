@@ -1,3 +1,12 @@
 <div class="grid grid-cols-1 gap-4">
-    <app-expense-item *ngFor="let expense of expenses$ | async" [expense]="expense"></app-expense-item>
-</div>
+    <label class="block text-gray-700 font-bold mb-2">Filtrer :</label>
+    <input
+      [(ngModel)]="filterValue"
+      (input)="filterExpenses()"
+      class="p-4 bg-white shadow-md rounded-lg flex items-center justify-between mb-4"
+    />
+    <app-expense-item
+      *ngFor="let expense of filteredExpenses$ | async"
+      [expense]="expense"
+    ></app-expense-item>
+  </div>
