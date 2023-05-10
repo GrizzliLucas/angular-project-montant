@@ -1,3 +1,5 @@
+Montant Lucas ( Pas d'angular en entreprise ) 
+
 # Projet de gestion de notes de frais. Lucas Montant (Pas d'Angular en entreprise)
 
 Le projet utilise Angular, tailwinds, FireBase RealTime Database ainsi que la connexion avec google de FireBase.
