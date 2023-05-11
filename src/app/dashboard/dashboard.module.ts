@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-
+import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     SidebarComponent,
@@ -11,7 +11,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    TranslateModule
   ],
   exports: [
     SidebarComponent,
