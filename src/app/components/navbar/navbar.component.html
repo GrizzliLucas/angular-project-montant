@@ -1,14 +1,16 @@
 <header class="bg-gray-800 text-white shadow-md">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="font-semibold text-lg">Gestion de notes de frais</div>
+    <div class="font-semibold text-lg">{{ 'EXPENSE_MANAGEMENT' | translate }}</div>
     <ng-container *ngIf="(authService.user$ | async) as user; else showLogin"> 
       <div class="flex items-center relative group">
-        <img [src]="user.photoURL" alt="User photo" class="h-8 w-8 rounded-full transition-all duration-200 cursor-pointer" (mouseover)="hovering = true" (mouseout)="hovering = false" [title]="hovering ? 'Se déconnecter' : ''" (click)="logout()" />
+        <img [src]="user.photoURL" alt="User photo" class="h-8 w-8 rounded-full transition-all duration-200 cursor-pointer" (mouseover)="hovering = true" (mouseout)="hovering = false" [title]="hovering ? ('LOGOUT' | translate) : ''" (click)="logout()" />
         <div class="hidden absolute top-0 left-0 w-full h-full bg-red-500 opacity-0 group-hover:opacity-100 transition-all duration-200 rounded-full"></div>
       </div>
     </ng-container>
     <ng-template #showLogin>
-      <a routerLink="/login" class="btn btn-primary">Se connecter</a>
+      <a routerLink="/login" class="btn btn-primary">{{ 'LOGIN' | translate }}</a>
     </ng-template>
+    <button (click)="changeLanguage('fr')">Français</button>
+    <button (click)="changeLanguage('en')">Anglais</button>
   </div>
 </header>

@@ -1,7 +1,7 @@
 <div class="container mx-auto mt-10">
     <div class="mt-8 flex items-end space-x-8">
       <div class="w-1/2 bg-orange-100 border border-orange-300 p-4 rounded-md flex flex-col justify-between">
-        <h2 class="mb-4">En attente</h2>
+        <h2 class="mb-4">{{ 'WAITING' | translate }}</h2>
         <ng-container *ngFor="let expense of expenses$ | async">
           <ng-container *ngIf="expense.status === 'en attente'">
             <div class="mb-2">
@@ -12,7 +12,7 @@
         </ng-container>
       </div>
       <div class="w-1/2 bg-green-100 border border-green-300 p-4 rounded-md flex flex-col justify-between">
-        <h2 class="mb-4">Terminé</h2>
+        <h2 class="mb-4">{{ 'ENDED' | translate }}</h2>
         <ng-container *ngFor="let expense of expenses$ | async">
           <ng-container *ngIf="expense.status === 'terminé'">
             <div class="mb-2">
@@ -31,10 +31,10 @@
       }"
     >
       <div>
-        À venir : {{ totalEnAttente }} €
+        {{ 'INCOMMING' | translate }}: {{ totalEnAttente }} €
       </div>
       <div>
-        Reçu : {{ totalTermine }} €
+        {{ 'RECEIVED' | translate }} : {{ totalTermine }} €
       </div>
     </div>
   </div>
