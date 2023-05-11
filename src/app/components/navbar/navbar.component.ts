@@ -23,4 +23,5 @@ export class NavbarComponent {
   changeLanguage(lang: string) {
     this.translateService.use(lang);
   }
+
 }
